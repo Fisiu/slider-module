@@ -5,10 +5,9 @@
             <a href="{{ $slide->getLinkUrl() }}" target="{{ $slide->target }}">
         @endif
         <div class="carousel-caption d-none d-md-block">
-            <h1>{{ $slide->title }}</h1>
-            <span>
-                {{ $slide->caption }}
-            </span>
+            <h3 class="slide-title animated fadeInDown">{{ $slide->title }}</h3>
+            <h5 class="slide-text animated fadeIn">{{ $slide->caption }}</h5>
+            {!! $slide->custom_html !!}
         </div>
         @if(!empty($slide->getLinkUrl()))
             </a>
